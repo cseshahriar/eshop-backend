@@ -20,17 +20,16 @@ This project is from my Django + React collaboration wih @cseshahriar.
 * PayPal / credit card integration
 
 
-# Download & Setup Instructions
-
+# Download & Setup Instructions for the backend
 * 1 - Clone project: git clone https://github.com/cseshahriar/eshop-backend.git
-* 2 - cd proshop_django
+* 2 - cd eshop-backend
 * 3 - Create virtual environment: virtualenv myenv
 * 4 - myenv\scripts\activate
 * 5 - pip install -r requirements.txt
 * 6 - python manage.py runserver
 
-# Install react modules
-* 1 - cd frontend
-* 2 - npm install
-# eshop-backend
-# eshop-backend
+# Install frontend modules
+* 1 - Clone project: git clone https://github.com/cseshahriar/eshop-frontend.git
+* 2 - cd eshop-frontend
+* 3 - npm install
+* 4 - npm start
