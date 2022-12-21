@@ -47,6 +47,7 @@ class ReviewSerializer(serializers.ModelSerializer):
 
 class ProductSerializer(serializers.ModelSerializer):
     reviews = serializers.SerializerMethodField(read_only=True)
+    img_url = serializers.SerializerMethodField()
 
     class Meta:
         model = Product
@@ -56,6 +57,9 @@ class ProductSerializer(serializers.ModelSerializer):
         reviews = obj.review_set.all()
         serializer = ReviewSerializer(reviews, many=True)
         return serializer.data
+
+    def get_img_url(self, obj):
+        return obj.get_image_url
 
 
 class ShippingAddressSerializer(serializers.ModelSerializer):

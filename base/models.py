@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.contrib.sites.models import Site
 
 # Create your models here.
 
@@ -23,6 +24,11 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
+
+    @property
+    def get_image_url(self):
+        current_site = Site.objects.get_current()
+        return f"{current_site}{self.image.url}"
 
 
 class Review(models.Model):
