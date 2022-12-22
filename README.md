@@ -1,6 +1,6 @@
-# EShop Ecommerce Website With Django + React
+# EShop Ecommerce Website With Django
 
-This project is from my Django + React collaboration wih @cseshahriar.
+This project is from my Django collaboration.
 
 ![DEMO](../main/static/images/eshop_django_demo.png)
 
