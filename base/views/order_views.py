@@ -16,6 +16,7 @@ from datetime import datetime
 def addOrderItems(request):
     user = request.user
     data = request.data
+    print('-' * 30, 'data', data)
 
     orderItems = data['orderItems']
 
