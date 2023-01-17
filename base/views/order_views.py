@@ -109,7 +109,7 @@ def getOrderById(request, pk):
 @api_view(['PUT'])
 @permission_classes([IsAuthenticated])
 def updateOrderToPaid(request, pk):
-    order = Order.objects.get(_id=pk)
+    order = Order.objects.get(pk=pk)
 
     order.isPaid = True
     order.paidAt = datetime.now()
