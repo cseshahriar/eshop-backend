@@ -100,9 +100,9 @@ def updateProduct(request, pk):
 @api_view(['DELETE'])
 @permission_classes([IsAdminUser])
 def deleteProduct(request, pk):
-    product = Product.objects.get(_id=pk)
+    product = Product.objects.get(pk=pk)
     product.delete()
-    return Response('Producted Deleted')
+    return Response('Product Deleted')
 
 
 @api_view(['POST'])
