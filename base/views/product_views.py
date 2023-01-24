@@ -108,10 +108,10 @@ def deleteProduct(request, pk):
 @api_view(['POST'])
 def uploadImage(request):
     data = request.data
-
+    # get product
     product_id = data['product_id']
     product = Product.objects.get(pk=product_id)
-
+    # save image
     product.image = request.FILES.get('image')
     product.save()
 
