@@ -1,22 +1,25 @@
 import React, { useState } from 'react'
 import { Button, Form } from 'react-bootstrap'
-import { useHistory } from 'react-router-dom'
+import {useLocation, useNavigate} from 'react-router-dom';
 
 function SearchBox() {
     const [keyword, setKeyword] = useState('')
 
-    let history = useHistory()
+    const navigate = useNavigate();
+    const location = useLocation();
 
     const submitHandler = (e) => {
         e.preventDefault()
         if (keyword) {
-            history.push(`/?keyword=${keyword}&page=1`)
+            navigate(`/?keyword=${keyword}&page=1`)
         } else {
-            history.push(history.push(history.location.pathname))
+            // navigate(location.search)
+            navigate(location.pathname);
         }
     }
+
     return (
-        <Form onSubmit={submitHandler} inline>
+        <Form onSubmit={submitHandler} className="d-flex">
             <Form.Control
                 type='text'
                 name='q'
@@ -29,10 +32,10 @@ function SearchBox() {
                 variant='outline-success'
                 className='p-2'
             >
-                Submit
+                <i className="fa fa-search fa-2x"></i>
             </Button>
         </Form>
     )
 }
 
-export default SearchBox
+export default SearchBox;

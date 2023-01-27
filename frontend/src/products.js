@@ -9,7 +9,7 @@ const products = [
     'category': 'Electronics',
     'price': 89.99,
     'countInStock': 10,
-    'rating': 4.5,
+    'rating': 0.5,
     'numReviews': 12,
   },
   {
@@ -21,8 +21,8 @@ const products = [
     'brand': 'Apple',
     'category': 'Electronics',
     'price': 599.99,
-    'countInStock': 0,
-    'rating': 4.0,
+    'countInStock': 7,
+    'rating': 1,
     'numReviews': 8,
   },
   {
@@ -60,7 +60,7 @@ const products = [
     'brand': 'Logitech',
     'category': 'Electronics',
     'price': 49.99,
-    'countInStock': 7,
+    'countInStock': 0,
     'rating': 3.5,
     'numReviews': 10,
   },

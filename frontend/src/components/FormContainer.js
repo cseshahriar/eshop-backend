@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap'
 
 function FormContainer({ children }) {
     return (
-        <Container>
+        <Container className="py-5">
             <Row className="justify-content-md-center">
                 <Col xs={12} md={6}>
                     {children}
@@ -13,4 +13,4 @@ function FormContainer({ children }) {
     )
 }
 
-export default FormContainer
+export default FormContainer;
